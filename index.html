@@ -1,0 +1,263 @@
+<html>
+<head>
+<title>WESAS EVENTS</title>
+<link href="https://www.w3schools.com/w3css/4/w3.css" type="text/css"/ rel="stylesheet">
+<link href="index.css" rel="stylesheet" type="text/css"/> 
+</head>
+<style>
+/* Add padding to containers */
+.container {
+ 
+  background-color: white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+input[type=text] {
+  width: 130px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+  width: 100%;
+}
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+</style>
+<body>
+<div class = "header">
+<div class = "inner-header">
+
+<div class = "logo">Wesas Events</div>
+
+<div class= "header-link">
+
+<a href="signup.html" target="_blank"> sign up </a> </div>
+
+</div>
+</div>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'About')">About</button>
+  <button class="tablinks" onclick="openCity(event, 'Gallery')">Gallery</button>
+  <button class="tablinks" onclick="openCity(event, 'Contact Us')">Contact Us</button>
+</div>
+
+<div id="About" class="tabcontent">
+  <h3>About</h3>
+  <p>#EDIT THE MATTER AS PER YOUR ABOUT </p>
+</div>
+
+<div id="Gallery" class="tabcontent">
+  <h3>about</h3>
+  <p>ADD DIFFERENT IMAGES AS PER YOUR WISH</p>
+<div class="items">
+ <img src= "event.jpg" alt="" class="thumbnail"> 
+<img src= "event.jpg" alt="" class="thumbnail"> 
+<img src= "event.jpg" alt="" class="thumbnail"> 
+</div>
+</div>
+
+<div id="Contact Us" class="tabcontent">
+  <h3>Contact Us</h3>
+  <p>Add the details of the company details to contact</p>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+<div class="w3-container">
+<div class="w3-content w3-display-container style="width:100%">
+  <img class="mySlides" src="about-us.jpg" style="width:100%">
+  <img class="mySlides" src="uevents.jpg" style="width:100%">
+  <img class="mySlides" src="event.jpg" style="width:100%">
+  <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+    <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+    <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(e)"></span>
+  </div>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" we-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " we-white";
+}
+</script>
+
+
+</div>
+
+
+
+<div class = "container">
+ <div class="items">     
+ <a href="#" target="_blank" >             
+ <img src= "about-us.jpg" alt="" class="thumbnail">           
+ <div class="caption"> 
+                    
+ <h2>Events</h2>                           
+ <p>date:</p>
+ <p>fees:</p>                   
+<button class="button">BOOK NOW</button>
+</div>          
+ </a>              
+ </div> 
+ <div class="items">     
+ <a href="#" target="_blank" >             
+ <img src= "event.jpg" alt="" class="thumbnail">           
+ <div class="caption">                        
+ <h2>EVENTS</h2>                           
+ <p>date: </p>
+ <p>fees: </p>   
+  <button class="button">BOOK NOW</button>        
+ </div>          
+ </a>              
+ </div> 
+  <div class="items">     
+ <a href="#" target="_blank">             
+ <img src= "uevents.jpg" alt="" class="thumbnail">           
+ <div class="caption">                        
+ <h2>EVENTS</h2>                           
+ <p>date:</p>
+ <p>fees:</p>
+<button class="button">BOOK NOW</button>                   
+ </div>          
+ </a>              
+ </div> 
+</div>
+<footer>
+<div class = "container"> 
+<center><p> Copyright wesas.in. All Rights Reserved | Contact Us: ashish@wesas.in & events@wesas.in </p></center>
+</div>
+</footer>
+</body>
+</html>
